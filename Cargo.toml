@@ -1,4 +1,7 @@
 [workspace]
 members = [
 	"creatures",
+	"game",
+	"main",
+	"command",
 ]
