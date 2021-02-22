@@ -1,4 +1,4 @@
-use crate::CommandError;
+use crate::{utils::get_one_arg, CommandError};
 
 pub enum Query {
     CreatureKind { name: String },
@@ -9,17 +9,13 @@ impl Query {
         match args {
             [] => Err(CommandError::UnexpectedEnd),
 
-            ["creature_kind", args @ ..] | ["ck", args @ ..] => match args {
-                [] => Err(CommandError::UnexpectedEnd),
+            ["creature_kind", args @ ..] | ["ck", args @ ..] => {
+                let name = get_one_arg("query creature_kind", args)?;
 
-                [name] => Ok(Query::CreatureKind {
+                Ok(Query::CreatureKind {
                     name: name.to_string(),
-                }),
-
-                _ => Err(CommandError::TooManyArguments {
-                    subcommand: "query creature_kind",
-                }),
-            },
+                })
+            }
 
             [arg, ..] => Err(CommandError::InvalidArgument {
                 subcommand: "query",

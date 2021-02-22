@@ -1,8 +1,11 @@
+mod error;
 pub mod subcommands;
+mod utils;
 
 use std::str::FromStr;
 use subcommands::Query;
-use thiserror::Error;
+
+pub use error::CommandError;
 
 pub enum Command {
     Query(Query),
@@ -25,22 +28,4 @@ impl FromStr for Command {
             }),
         }
     }
-}
-
-#[derive(Debug, Error)]
-pub enum CommandError {
-    #[error("`{name}` is not a valid command")]
-    InvalidCommand { name: String },
-
-    #[error("Unexpected end of command")]
-    UnexpectedEnd,
-
-    #[error("Subcommand `{subcommand}`: Invalid argument `{arg}`")]
-    InvalidArgument {
-        subcommand: &'static str,
-        arg: String,
-    },
-
-    #[error("Subcommand `{subcommand}`: Too many arguments")]
-    TooManyArguments { subcommand: &'static str },
 }

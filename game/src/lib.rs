@@ -21,8 +21,8 @@ impl Game {
                             .map(|k| k.as_str())
                             .unwrap_or("None");
 
-                        println!("# {}", name);
-                        println!("Evolves into: {}", evolution);
+                        println!("{}", name);
+                        println!("  - Evolves into: {}", evolution);
                     } else {
                         eprintln!("`{}` is not a creature", name);
                     }
