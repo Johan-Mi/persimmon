@@ -1,17 +1,29 @@
+pub mod subcommands;
+
 use std::str::FromStr;
+use subcommands::Query;
 use thiserror::Error;
 
 pub enum Command {
-    // TODO
+    Query(Query),
 }
 
 impl FromStr for Command {
     type Err = CommandError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        Err(CommandError::InvalidCommand {
-            name: s.to_string(),
-        })
+        let parts: Vec<_> = s.split_whitespace().collect();
+
+        let (subcommand, args) =
+            parts.split_first().ok_or(CommandError::UnexpectedEnd)?;
+
+        match *subcommand {
+            "query" | "q" => Query::parse(args).map(Command::Query),
+
+            _ => Err(CommandError::InvalidCommand {
+                name: s.to_string(),
+            }),
+        }
     }
 }
 
@@ -19,4 +31,16 @@ impl FromStr for Command {
 pub enum CommandError {
     #[error("`{name}` is not a valid command")]
     InvalidCommand { name: String },
+
+    #[error("Unexpected end of command")]
+    UnexpectedEnd,
+
+    #[error("Subcommand `{subcommand}`: Invalid argument `{arg}`")]
+    InvalidArgument {
+        subcommand: &'static str,
+        arg: String,
+    },
+
+    #[error("Subcommand `{subcommand}`: Too many arguments")]
+    TooManyArguments { subcommand: &'static str },
 }

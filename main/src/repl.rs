@@ -10,8 +10,15 @@ where
 
         let mut input = String::new();
         io::stdin().read_line(&mut input)?;
+
+        if input.is_empty() {
+            break;
+        }
+
         let input = input.trim();
 
         func(input)
     }
+
+    Ok(())
 }
