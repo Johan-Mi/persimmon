@@ -1,13 +1,16 @@
 use command::{subcommands::Query, Command};
 use creatures::CreatureKind;
+use player::Player;
 
 pub struct Game {
-    // TODO
+    player: Player,
 }
 
 impl Game {
     pub fn new() -> Self {
-        Self {}
+        Self {
+            player: Player::new(),
+        }
     }
 
     pub fn run_command(&self, command: Command) {

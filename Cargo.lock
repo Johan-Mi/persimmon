@@ -8,6 +8,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "constants"
+version = "0.1.0"
+
+[[package]]
 name = "creatures"
 version = "0.1.0"
 
@@ -17,6 +21,7 @@ version = "0.1.0"
 dependencies = [
  "command",
  "creatures",
+ "player",
 ]
 
 [[package]]
@@ -24,6 +29,14 @@ name = "main"
 version = "0.1.0"
 dependencies = [
  "game",
+]
+
+[[package]]
+name = "player"
+version = "0.1.0"
+dependencies = [
+ "constants",
+ "creatures",
 ]
 
 [[package]]

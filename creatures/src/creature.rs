@@ -3,7 +3,7 @@ use crate::{
     types::{Exp, Health},
 };
 
-struct Creature {
+pub struct Creature {
     kind: CreatureKind,
     health: Health,
     exp: Exp,

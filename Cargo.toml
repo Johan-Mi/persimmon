@@ -4,4 +4,6 @@ members = [
 	"game",
 	"main",
 	"command",
+	"player",
+	"constants",
 ]
