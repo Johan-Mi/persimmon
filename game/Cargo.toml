@@ -7,6 +7,8 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+constants = { path = "../constants" }
 command = { path = "../command" }
 creatures = { path = "../creatures" }
 player = { path = "../player" }
+sdl2 = { version = "0.34.3", default-features = false, features = [] }
