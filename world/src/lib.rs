@@ -1,1 +1,1 @@
-mod tile;
+pub mod tile;

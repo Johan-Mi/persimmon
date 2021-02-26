@@ -36,6 +36,7 @@ dependencies = [
  "creatures",
  "player",
  "sdl2",
+ "world",
 ]
 
 [[package]]
@@ -152,3 +153,7 @@ checksum = "d63556a25bae6ea31b52e640d7c41d1ab27faba4ccb600013837a3d0b3994ca1"
 [[package]]
 name = "world"
 version = "0.1.0"
+dependencies = [
+ "constants",
+ "sdl2",
+]

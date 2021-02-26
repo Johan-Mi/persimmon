@@ -11,4 +11,5 @@ constants = { path = "../constants" }
 command = { path = "../command" }
 creatures = { path = "../creatures" }
 player = { path = "../player" }
-sdl2 = { version = "0.34.3", default-features = false, features = [] }
+world = { path = "../world" }
+sdl2 = { version = "0.34.3", default-features = false, features = ["image"] }
