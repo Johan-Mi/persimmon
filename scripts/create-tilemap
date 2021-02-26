@@ -1,0 +1,6 @@
+#!/bin/sh
+
+files=$(awk '/pub enum Tile/{flag=1;next}/\}/{flag=0}flag' world/src/tile.rs \
+	| sed -e 's/^\s*/assets\/textures\/tiles\//;s/,$/.png/')
+
+convert $files +append assets/textures/tilemap.png
