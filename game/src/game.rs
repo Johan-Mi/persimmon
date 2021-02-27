@@ -98,19 +98,16 @@ impl Game {
                     }
 
                     Event::Window {
-                        win_event: WindowEvent::Resized(new_width, new_height),
+                        win_event: WindowEvent::Resized(..),
                         ..
                     } => {
-                        let scale_x =
-                            new_width as f32 / WINDOW_PIXEL_WIDTH as f32;
-                        let scale_y =
-                            new_height as f32 / WINDOW_PIXEL_HEIGHT as f32;
-
-                        let scale = scale_x.min(scale_y);
-
+                        gfx.canvas
+                            .set_logical_size(
+                                WINDOW_PIXEL_WIDTH,
+                                WINDOW_PIXEL_HEIGHT,
+                            )
+                            .unwrap();
                         gfx.canvas.clear();
-
-                        gfx.canvas.set_scale(scale, scale).unwrap();
                     }
 
                     _ => {}
