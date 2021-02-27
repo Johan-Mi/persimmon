@@ -7,7 +7,10 @@ use constants::{
 use creatures::CreatureKind;
 use player::Player;
 use sdl2::{
-    event::Event, image::LoadTexture, keyboard::Keycode, pixels::Color,
+    event::{Event, WindowEvent},
+    image::LoadTexture,
+    keyboard::Keycode,
+    pixels::Color,
     rect::Rect,
 };
 use std::time::{Duration, Instant};
@@ -52,6 +55,7 @@ impl Game {
         let window = video_subsystem
             .window("Persimmon", WINDOW_PIXEL_WIDTH, WINDOW_PIXEL_HEIGHT)
             .position_centered()
+            .resizable()
             .build()
             .unwrap();
 
@@ -91,6 +95,17 @@ impl Game {
                         ..
                     } => {
                         break 'running;
+                    }
+
+                    Event::Window {
+                        win_event: WindowEvent::Resized(new_width, new_height),
+                        ..
+                    } => {
+                        let scale_x =
+                            new_width as f32 / WINDOW_PIXEL_WIDTH as f32;
+                        let scale_y =
+                            new_height as f32 / WINDOW_PIXEL_HEIGHT as f32;
+                        gfx.canvas.set_scale(scale_x, scale_y).unwrap();
                     }
 
                     _ => {}
