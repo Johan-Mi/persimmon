@@ -119,7 +119,9 @@ impl Game {
 
             let time_spent = now.elapsed();
             std::thread::sleep(
-                Duration::new(0, 1_000_000_000u32 / FRAMERATE) - time_spent,
+                Duration::new(0, 1_000_000_000u32 / FRAMERATE)
+                    .checked_sub(time_spent)
+                    .unwrap_or_default(),
             );
         }
     }
