@@ -74,7 +74,7 @@ impl Game {
             textures,
         };
 
-        gfx.canvas.set_draw_color(Color::RGB(0, 255, 255));
+        gfx.canvas.set_draw_color(Color::RGB(0, 0, 0));
 
         gfx.canvas.clear();
         gfx.canvas.present();
@@ -105,7 +105,12 @@ impl Game {
                             new_width as f32 / WINDOW_PIXEL_WIDTH as f32;
                         let scale_y =
                             new_height as f32 / WINDOW_PIXEL_HEIGHT as f32;
-                        gfx.canvas.set_scale(scale_x, scale_y).unwrap();
+
+                        let scale = scale_x.min(scale_y);
+
+                        gfx.canvas.clear();
+
+                        gfx.canvas.set_scale(scale, scale).unwrap();
                     }
 
                     _ => {}
