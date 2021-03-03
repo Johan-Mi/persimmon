@@ -1,4 +1,4 @@
 mod game;
-mod gfx;
+mod state;
 
 pub use game::Game;

@@ -7,4 +7,6 @@ members = [
 	"command",
 	"player",
 	"constants",
+	"gfx",
+	"misc",
 ]

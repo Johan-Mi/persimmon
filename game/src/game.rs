@@ -1,10 +1,11 @@
-use crate::gfx::{Gfx, Textures};
+use crate::state::GameState;
 use command::{subcommands::Query, Command};
 use constants::{
     FRAMERATE, TILE_SIZE, WINDOW_PIXEL_HEIGHT, WINDOW_PIXEL_WIDTH,
     WINDOW_TILE_HEIGHT, WINDOW_TILE_WIDTH,
 };
 use creatures::CreatureKind;
+use gfx::{Gfx, Textures};
 use player::Player;
 use sdl2::{
     event::{Event, WindowEvent},
@@ -13,17 +14,31 @@ use sdl2::{
     pixels::Color,
     rect::Rect,
 };
-use std::time::{Duration, Instant};
-use world::tile::Tile;
+use std::{
+    collections::HashMap,
+    time::{Duration, Instant},
+};
+use world::room::Room;
 
 pub struct Game {
     player: Player,
+    state: GameState,
+
+    rooms: HashMap<String, Room>,
+    current_room: String,
 }
 
 impl Game {
     pub fn new() -> Self {
+        let default_room = Room::default();
+        let mut rooms = HashMap::with_capacity(1);
+        rooms.insert("default".to_string(), default_room);
+
         Self {
             player: Player::new(),
+            state: GameState::Overworld,
+            rooms,
+            current_room: "default".to_string(),
         }
     }
 
@@ -133,13 +148,11 @@ impl Game {
     }
 
     fn render(&self, gfx: &mut Gfx) {
+        let room = self.rooms.get(&self.current_room).unwrap();
+
         for y in 0..WINDOW_TILE_HEIGHT {
             for x in 0..WINDOW_TILE_WIDTH {
-                let tile = if x % 2 == y % 2 {
-                    Tile::Ground
-                } else {
-                    Tile::Rock
-                };
+                let tile = room.get_tile(x as usize, y as usize);
 
                 let src_rect = tile.rect();
                 let dst_rect = Rect::new(

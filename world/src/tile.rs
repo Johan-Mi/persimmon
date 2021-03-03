@@ -1,7 +1,8 @@
 use constants::TILE_SIZE;
 use sdl2::rect::Rect;
+use serde::{Deserialize, Serialize};
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Serialize, Deserialize)]
 pub enum Tile {
     Ground,
     Rock,

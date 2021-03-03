@@ -12,4 +12,5 @@ command = { path = "../command" }
 creatures = { path = "../creatures" }
 player = { path = "../player" }
 world = { path = "../world" }
+gfx = { path = "../gfx" }
 sdl2 = { version = "0.34.3", default-features = false, features = ["image"] }
