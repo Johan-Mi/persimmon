@@ -8,5 +8,6 @@ members = [
 	"player",
 	"constants",
 	"gfx",
+	"ui",
 	"misc",
 ]

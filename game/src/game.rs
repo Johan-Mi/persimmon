@@ -18,6 +18,10 @@ use std::{
     collections::HashMap,
     time::{Duration, Instant},
 };
+use ui::{
+    core::{Position, Rect as UiRect, Widget},
+    widgets::Panel,
+};
 use world::room::Room;
 
 pub struct Game {
@@ -26,6 +30,8 @@ pub struct Game {
 
     rooms: HashMap<String, Room>,
     current_room: String,
+
+    menu: Box<dyn Widget>,
 }
 
 impl Game {
@@ -34,11 +40,20 @@ impl Game {
         let mut rooms = HashMap::with_capacity(1);
         rooms.insert("default".to_string(), default_room);
 
+        let menu = Box::new(Panel {
+            x: Position::Absolute(8),
+            y: Position::Absolute(8),
+            width: 70,
+            height: 100,
+            contained: None,
+        });
+
         Self {
             player: Player::new(),
             state: GameState::Overworld,
             rooms,
             current_room: "default".to_string(),
+            menu,
         }
     }
 
@@ -122,6 +137,7 @@ impl Game {
                                 WINDOW_PIXEL_HEIGHT,
                             )
                             .unwrap();
+                        gfx.canvas.set_draw_color(Color::BLACK);
                         gfx.canvas.clear();
                     }
 
@@ -167,5 +183,13 @@ impl Game {
                     .unwrap();
             }
         }
+
+        let boundry = UiRect {
+            x: 0,
+            y: 0,
+            width: WINDOW_PIXEL_WIDTH,
+            height: WINDOW_PIXEL_HEIGHT,
+        };
+        self.menu.render(&boundry, gfx);
     }
 }

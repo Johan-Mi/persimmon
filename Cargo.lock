@@ -53,6 +53,7 @@ dependencies = [
  "gfx",
  "player",
  "sdl2",
+ "ui",
  "world",
 ]
 
@@ -185,6 +186,14 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
+]
+
+[[package]]
+name = "ui"
+version = "0.1.0"
+dependencies = [
+ "gfx",
+ "sdl2",
 ]
 
 [[package]]
