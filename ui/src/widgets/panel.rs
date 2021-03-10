@@ -14,66 +14,104 @@ impl Widget for Panel {
     }
 
     fn render(&self, boundry: &Rect, gfx: &mut gfx::Gfx) {
-        let panel_rect =
-            SdlRect::new(boundry.x, boundry.y, boundry.width, boundry.height);
+        let inner_rect = Rect {
+            x: boundry.x + 4,
+            y: boundry.y + 4,
+            width: boundry.width - 8,
+            height: boundry.height - 8,
+        };
 
         gfx.canvas.set_draw_color(Color::WHITE);
-        gfx.canvas.fill_rect(panel_rect).unwrap();
+        gfx.canvas
+            .fill_rect(SdlRect::from(inner_rect.clone()))
+            .unwrap();
 
         let corner_rect = Tile::UiPanelCorners.rect();
 
         gfx.canvas
             .copy(
                 &gfx.textures.tilemap,
-                SdlRect::new(corner_rect.x(), corner_rect.y(), 8, 8),
-                SdlRect::new(boundry.x, boundry.y, 8, 8),
+                SdlRect::new(corner_rect.x(), corner_rect.y(), 4, 4),
+                SdlRect::new(boundry.x, boundry.y, 4, 4),
             )
             .unwrap();
         gfx.canvas
             .copy(
                 &gfx.textures.tilemap,
-                SdlRect::new(corner_rect.x() + 8, corner_rect.y(), 8, 8),
+                SdlRect::new(corner_rect.x() + 4, corner_rect.y(), 4, 4),
                 SdlRect::new(
-                    boundry.x + boundry.width as i32 - 8,
+                    boundry.x + boundry.width as i32 - 4,
                     boundry.y,
-                    8,
-                    8,
+                    4,
+                    4,
                 ),
             )
             .unwrap();
         gfx.canvas
             .copy(
                 &gfx.textures.tilemap,
-                SdlRect::new(corner_rect.x() + 8, corner_rect.y() + 8, 8, 8),
+                SdlRect::new(corner_rect.x() + 4, corner_rect.y() + 4, 4, 4),
                 SdlRect::new(
-                    boundry.x + boundry.width as i32 - 8,
-                    boundry.y + boundry.height as i32 - 8,
-                    8,
-                    8,
+                    boundry.x + boundry.width as i32 - 4,
+                    boundry.y + boundry.height as i32 - 4,
+                    4,
+                    4,
                 ),
             )
             .unwrap();
         gfx.canvas
             .copy(
                 &gfx.textures.tilemap,
-                SdlRect::new(corner_rect.x(), corner_rect.y() + 8, 8, 8),
+                SdlRect::new(corner_rect.x(), corner_rect.y() + 4, 4, 4),
                 SdlRect::new(
                     boundry.x,
-                    boundry.y + boundry.height as i32 - 8,
-                    8,
-                    8,
+                    boundry.y + boundry.height as i32 - 4,
+                    4,
+                    4,
+                ),
+            )
+            .unwrap();
+
+        gfx.canvas
+            .copy(
+                &gfx.textures.tilemap,
+                SdlRect::new(corner_rect.x() + 3, corner_rect.y(), 1, 4),
+                SdlRect::new(boundry.x + 4, boundry.y, inner_rect.width, 4),
+            )
+            .unwrap();
+        gfx.canvas
+            .copy(
+                &gfx.textures.tilemap,
+                SdlRect::new(corner_rect.x() + 3, corner_rect.y() + 4, 1, 4),
+                SdlRect::new(
+                    boundry.x + 4,
+                    boundry.y + boundry.height as i32 - 4,
+                    inner_rect.width,
+                    4,
+                ),
+            )
+            .unwrap();
+        gfx.canvas
+            .copy(
+                &gfx.textures.tilemap,
+                SdlRect::new(corner_rect.x(), corner_rect.y() + 3, 4, 1),
+                SdlRect::new(boundry.x, boundry.y + 4, 4, inner_rect.height),
+            )
+            .unwrap();
+        gfx.canvas
+            .copy(
+                &gfx.textures.tilemap,
+                SdlRect::new(corner_rect.x + 4, corner_rect.y() + 3, 4, 1),
+                SdlRect::new(
+                    boundry.x + boundry.width as i32 - 4,
+                    boundry.y + 4,
+                    4,
+                    inner_rect.height,
                 ),
             )
             .unwrap();
 
         if let Some(contained) = &self.contained {
-            let inner_rect = Rect {
-                x: boundry.x + 8,
-                y: boundry.y + 8,
-                width: boundry.width - 16,
-                height: boundry.height - 16,
-            };
-
             contained.render(&inner_rect, gfx);
         }
     }
