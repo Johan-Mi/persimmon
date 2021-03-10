@@ -20,7 +20,7 @@ use std::{
 };
 use ui::{
     core::{Position, Rect as UiRect, Widget},
-    widgets::Panel,
+    widgets::{Panel, Positioned},
 };
 use world::room::Room;
 
@@ -40,12 +40,12 @@ impl Game {
         let mut rooms = HashMap::with_capacity(1);
         rooms.insert("default".to_string(), default_room);
 
-        let menu = Box::new(Panel {
+        let menu = Box::new(Positioned {
             x: Position::Absolute(8),
             y: Position::Absolute(8),
             width: 70,
             height: 100,
-            contained: None,
+            contained: Box::new(Panel { contained: None }),
         });
 
         Self {
