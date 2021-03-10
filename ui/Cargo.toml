@@ -8,4 +8,5 @@ edition = "2018"
 
 [dependencies]
 gfx = { path = "../gfx" }
+world = { path = "../world" }
 sdl2 = { version = "0.34.3", default-features = false, features = ["image"] }
