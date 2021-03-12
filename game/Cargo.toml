@@ -14,4 +14,4 @@ player = { path = "../player" }
 world = { path = "../world" }
 gfx = { path = "../gfx" }
 ui = { path = "../ui" }
-sdl2 = { version = "0.34.3", default-features = false, features = ["image"] }
+sdl2 = { version = "0.34.3", default-features = false, features = ["image", "ttf"] }

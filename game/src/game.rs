@@ -5,7 +5,7 @@ use constants::{
     WINDOW_TILE_HEIGHT, WINDOW_TILE_WIDTH,
 };
 use creatures::CreatureKind;
-use gfx::{Gfx, Textures};
+use gfx::{Fonts, Gfx, Textures};
 use player::Player;
 use sdl2::{
     event::{Event, WindowEvent},
@@ -20,7 +20,7 @@ use std::{
 };
 use ui::{
     core::{Position, Rect as UiRect, Widget},
-    widgets::{Panel, Positioned},
+    widgets::{Panel, Positioned, Text},
 };
 use world::room::Room;
 
@@ -45,7 +45,11 @@ impl Game {
             y: Position::Absolute(8),
             width: 70,
             height: 100,
-            contained: Box::new(Panel { contained: None }),
+            contained: Box::new(Panel {
+                contained: Some(Box::new(Text {
+                    text: "ABC".to_string(),
+                })),
+            }),
         });
 
         Self {
@@ -98,10 +102,22 @@ impl Game {
 
         let textures = Textures { tilemap };
 
+        let font_context = sdl2::ttf::init().unwrap();
+
+        let font_regular = font_context
+            .load_font("assets/fonts/PersimmonRegular.ttf", 8)
+            .unwrap();
+
+        let fonts = Fonts {
+            regular: font_regular,
+        };
+
         let mut gfx = Gfx {
             canvas,
             texture_creator: &texture_creator,
             textures,
+            font_context: &font_context,
+            fonts,
         };
 
         gfx.canvas.set_draw_color(Color::RGB(0, 0, 0));
