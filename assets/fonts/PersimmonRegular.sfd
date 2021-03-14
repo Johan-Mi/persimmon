@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1615539427
-ModificationTime: 1615539506
+ModificationTime: 1615739211
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -44,11 +44,11 @@ NameList: AGL For New Fonts
 DisplaySize: 8
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 25 15
+WinInfo: 0 32 12
 OnlyBitmaps: 1
 BeginPrivate: 0
 EndPrivate
-BeginChars: 256 5
+BeginChars: 256 69
 
 StartChar: A
 Encoding: 65 65 0
@@ -84,8 +84,450 @@ Width: 1000
 Flags: W
 LayerCount: 2
 EndChar
+
+StartChar: F
+Encoding: 70 70 5
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: G
+Encoding: 71 71 6
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: H
+Encoding: 72 72 7
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: I
+Encoding: 73 73 8
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: J
+Encoding: 74 74 9
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: K
+Encoding: 75 75 10
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: L
+Encoding: 76 76 11
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: M
+Encoding: 77 77 12
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: N
+Encoding: 78 78 13
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: O
+Encoding: 79 79 14
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: P
+Encoding: 80 80 15
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: Q
+Encoding: 81 81 16
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: R
+Encoding: 82 82 17
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: S
+Encoding: 83 83 18
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: T
+Encoding: 84 84 19
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: U
+Encoding: 85 85 20
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: V
+Encoding: 86 86 21
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: W
+Encoding: 87 87 22
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: X
+Encoding: 88 88 23
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: Y
+Encoding: 89 89 24
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: Z
+Encoding: 90 90 25
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: parenright
+Encoding: 41 41 26
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: parenleft
+Encoding: 40 40 27
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: exclam
+Encoding: 33 33 28
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: plus
+Encoding: 43 43 29
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: hyphen
+Encoding: 45 45 30
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: period
+Encoding: 46 46 31
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: slash
+Encoding: 47 47 32
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: zero
+Encoding: 48 48 33
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: one
+Encoding: 49 49 34
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: two
+Encoding: 50 50 35
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: three
+Encoding: 51 51 36
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: four
+Encoding: 52 52 37
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: bracketleft
+Encoding: 91 91 38
+Width: 1000
+LayerCount: 2
+EndChar
+
+StartChar: backslash
+Encoding: 92 92 39
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: bracketright
+Encoding: 93 93 40
+Width: 1000
+LayerCount: 2
+EndChar
+
+StartChar: asciicircum
+Encoding: 94 94 41
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: underscore
+Encoding: 95 95 42
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: space
+Encoding: 32 32 43
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: quotedbl
+Encoding: 34 34 44
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: numbersign
+Encoding: 35 35 45
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: dollar
+Encoding: 36 36 46
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: percent
+Encoding: 37 37 47
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: quotesingle
+Encoding: 39 39 48
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: asterisk
+Encoding: 42 42 49
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: comma
+Encoding: 44 44 50
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: five
+Encoding: 53 53 51
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: six
+Encoding: 54 54 52
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: seven
+Encoding: 55 55 53
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: eight
+Encoding: 56 56 54
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: nine
+Encoding: 57 57 55
+Width: 1000
+LayerCount: 2
+EndChar
+
+StartChar: colon
+Encoding: 58 58 56
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: semicolon
+Encoding: 59 59 57
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: less
+Encoding: 60 60 58
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: equal
+Encoding: 61 61 59
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: greater
+Encoding: 62 62 60
+Width: 1000
+LayerCount: 2
+EndChar
+
+StartChar: question
+Encoding: 63 63 61
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: at
+Encoding: 64 64 62
+Width: 1000
+LayerCount: 2
+EndChar
+
+StartChar: asciitilde
+Encoding: 126 126 63
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: bar
+Encoding: 124 124 64
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: braceleft
+Encoding: 123 123 65
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: braceright
+Encoding: 125 125 66
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: grave
+Encoding: 96 96 67
+Width: 1000
+Flags: W
+LayerCount: 2
+EndChar
+
+StartChar: a
+Encoding: 97 97 68
+Width: 1000
+LayerCount: 2
+EndChar
 EndChars
-BitmapFont: 8 5 6 2 1
+BitmapFont: 8 69 6 2 1
 BDFChar: 0 65 8 1 7 -2 4
 I)<c"_SX.i
 BDFChar: 1 66 8 1 7 -2 4
@@ -96,5 +538,133 @@ BDFChar: 3 68 8 1 7 -2 4
 pr(%d_SZ3N
 BDFChar: 4 69 8 1 7 -2 4
 rkQ>K^qfpL
+BDFChar: 5 70 8 1 7 -2 4
+rkQ>K^qd_c
+BDFChar: 6 71 8 1 7 -2 4
+I,_rW`o;@G
+BDFChar: 7 72 8 1 7 -2 4
+_SX1h_SX.i
+BDFChar: 8 73 8 1 6 -2 4
+r%KfY0JND)
+BDFChar: 9 74 8 1 7 -2 4
+"pP89`l<B+
+BDFChar: 10 75 8 1 7 -2 4
+_SX7d`59@k
+BDFChar: 11 76 8 1 7 -2 4
+^qdb$^qfpL
+BDFChar: 12 77 8 1 7 -2 4
+`pVEt`l?!u
+BDFChar: 13 78 8 1 7 -2 4
+`objt`l?!u
+BDFChar: 14 79 8 1 7 -2 4
+I)a1G`l<B+
+BDFChar: 15 80 8 1 7 -2 4
+r5->K^qd_c
+BDFChar: 16 81 8 1 7 -2 4
+I)<b;b/AT+
+BDFChar: 17 82 8 1 7 -2 4
+r5->K_SX.i
+BDFChar: 18 83 8 1 7 -2 4
+I)<[H#)7L*
+BDFChar: 19 84 8 1 7 -2 4
+rr*H?&.fBQ
+BDFChar: 20 85 8 1 7 -2 4
+`l?$<`l<B+
+BDFChar: 21 86 8 1 7 -2 4
+`l?$<CcDt+
+BDFChar: 22 87 8 1 7 -2 4
+`n&_lf%+X;
+BDFChar: 23 88 8 1 7 -2 4
+`pS46I."uS
+BDFChar: 24 89 8 1 7 -2 4
+`pS46&.fBQ
+BDFChar: 25 90 8 1 7 -2 4
+rWWcj@)2aA
+BDFChar: 26 41 8 2 5 -2 4
+i,CA(0Q>qM
+BDFChar: 27 40 8 2 5 -2 4
+E8\OI^u0/3
+BDFChar: 28 33 8 3 4 -2 4
+^qdb$!5QAM
+BDFChar: 29 43 8 2 6 -1 3
++<^G%+92BA
+BDFChar: 30 45 8 2 6 1 1
+p](9o
+BDFChar: 31 46 8 1 2 -1 0
+^q]pM
+BDFChar: 32 47 8 1 7 -2 4
+!X&c?+@(GW
+BDFChar: 33 48 8 2 6 -2 4
+E/9m[aG=d8
+BDFChar: 34 49 8 2 5 -2 4
++CLib+<^.R
+BDFChar: 35 50 8 1 6 -2 4
+G_?3EJ:ROt
+BDFChar: 36 51 8 1 6 -2 4
+G_?2:"GD""
+BDFChar: 37 52 8 1 6 -2 4
+(aqq2r!3Q.
+BDFChar: 38 91 8 2 5 -2 4
+nA)iT^qfF>
+BDFChar: 39 92 0 -3 3 -2 4
+J3Y4g#Qt2/
+BDFChar: 40 93 8 2 5 -2 4
+n1ZOM0JMtr
+BDFChar: 41 94 8 2 6 2 4
++Adjo
+BDFChar: 42 95 8 1 7 -2 -2
+rVuou
+BDFChar: 43 32 8 0 0 0 0
+z
+BDFChar: 44 34 8 3 5 3 4
+TV)8b
+BDFChar: 45 35 8 2 6 -1 3
+;#!l^:]LIq
+BDFChar: 46 36 8 2 6 -2 4
++F'Pu..A>Z
+BDFChar: 47 37 8 1 6 -2 3
+`5iK49T/rO
+BDFChar: 48 39 8 4 4 3 4
+J:IV"
+BDFChar: 49 42 8 2 6 0 3
+W,Q^S
+BDFChar: 50 44 8 1 2 -2 0
+5X9i"
+BDFChar: 51 53 8 1 6 -2 4
+r.+PF"GD""
+BDFChar: 52 54 8 1 6 -2 4
+G_CVBKS4RM
+BDFChar: 53 55 8 1 6 -2 4
+qud-.#S7OI
+BDFChar: 54 56 8 1 6 -2 4
+G_C`pKS4RM
+BDFChar: 55 57 8 1 6 -2 4
+G_C`t"GD""
+BDFChar: 56 58 8 1 2 -1 3
+^q]rc^]4?7
+BDFChar: 57 59 8 1 2 -2 3
+^q]rc5_&h7
+BDFChar: 58 60 8 2 4 0 4
++@(HB+92BA
+BDFChar: 59 61 8 1 4 1 3
+n,VqX
+BDFChar: 60 62 8 2 4 0 4
+J3Y5BJ,fQL
+BDFChar: 61 63 8 1 5 -2 4
+E/4c2+93Ma
+BDFChar: 62 64 8 0 0 0 0
+z
+BDFChar: 63 126 8 1 6 2 3
+A=*>s
+BDFChar: 64 124 8 4 4 -2 4
+J:N0#J:N.M
+BDFChar: 65 123 8 1 5 -2 4
+3+-.0?skqo
+BDFChar: 66 125 8 3 7 -2 4
+i%Qi%0JMDb
+BDFChar: 67 96 8 2 3 3 4
+J3X)7
+BDFChar: 68 97 8 0 0 0 0
+z
 EndBitmapFont
 EndSplineFont
