@@ -20,7 +20,10 @@ use std::{
 };
 use ui::{
     core::{Position, Rect as UiRect, Widget},
-    widgets::{Panel, Positioned, Text},
+    widgets::{
+        text::{Text, TextStyle},
+        Panel, Positioned,
+    },
 };
 use world::room::Room;
 
@@ -43,11 +46,13 @@ impl Game {
         let menu = Box::new(Positioned {
             x: Position::Absolute(8),
             y: Position::Absolute(8),
-            width: 70,
+            width: 160,
             height: 100,
             contained: Box::new(Panel {
                 contained: Some(Box::new(Text {
-                    text: "ABC".to_string(),
+                    text: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. NO LOWERCASE GLYPHS YET, THOUGH. ALSO, THIS FONT IS KIND OF UGLY BUT IT'S JUST A PLACEHOLDER."
+                        .to_string(),
+                    style: TextStyle::Regular,
                 })),
             }),
         });
