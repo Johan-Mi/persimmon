@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1615539427
-ModificationTime: 1615796514
+ModificationTime: 1615841702
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -438,7 +438,7 @@ EndChar
 
 StartChar: nine
 Encoding: 57 57 55
-Width: 750
+Width: 625
 Flags: W
 LayerCount: 2
 EndChar
@@ -825,8 +825,8 @@ BDFChar: 53 55 5 1 4 0 4
 n.6^-5QCca
 BDFChar: 54 56 5 1 4 0 4
 @$"cX?iU0,
-BDFChar: 55 57 6 1 5 0 4
-E/8`EDu]k<
+BDFChar: 55 57 5 1 4 0 4
+@$#==?iU0,
 BDFChar: 56 58 3 1 2 0 4
 ^q]rc^]4?7
 BDFChar: 57 59 3 1 2 -1 4
