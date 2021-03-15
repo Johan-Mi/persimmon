@@ -20,8 +20,8 @@ pub enum CreatureKind {
     Clameye,
     Clamscular,
 
-    Storcot,
     Storcarrot,
+    Castorkoo,
     Storkoneer,
 
     Strawchick,
@@ -39,8 +39,8 @@ pub enum CreatureKind {
     Dragonion,
     Wygoon,
 
+    Storcot,
     Castork,
-    Castorkoo,
     Banjot,
 
     Breadclops,
@@ -73,8 +73,8 @@ impl CreatureKind {
 
             Clameye => Some(Clamscular),
 
-            Storcot => Some(Storcarrot),
-            Storcarrot => Some(Storkoneer),
+            Storcot => Some(Castork),
+            Castork => Some(Banjot),
 
             Strawchick => Some(Strawhawk),
             Strawhawk => Some(Stralcon),
@@ -87,8 +87,8 @@ impl CreatureKind {
             Dragonling => Some(Dragonion),
             Dragonion => Some(Wygoon),
 
-            Castork => Some(Castorkoo),
-            Castorkoo => Some(Banjot),
+            Storcarrot => Some(Castorkoo),
+            Castorkoo => Some(Storkoneer),
 
             _ => None,
         }
