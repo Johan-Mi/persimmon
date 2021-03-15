@@ -22,7 +22,11 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1615539427
+<<<<<<< HEAD
 ModificationTime: 1615797397
+=======
+ModificationTime: 1615796514
+>>>>>>> 278776a406e5368d55c8828d83ad4a7a617392bf
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -763,10 +767,17 @@ BDFChar: 24 89 6 1 5 0 4
 Leo3:+92BA
 BDFChar: 25 90 6 1 5 0 4
 p^eQ5p](9o
+<<<<<<< HEAD
 BDFChar: 26 41 3 1 2 0 4
 J3Z@bJ,fQL
 BDFChar: 27 40 3 1 2 0 4
 5_+B85QCca
+=======
+BDFChar: 26 41 5 1 4 -2 4
+i,CA(0Q>qM
+BDFChar: 27 40 5 1 4 -2 4
+E8\OI^u0/3
+>>>>>>> 278776a406e5368d55c8828d83ad4a7a617392bf
 BDFChar: 28 33 3 1 2 -2 4
 ^qdb$!5QAM
 BDFChar: 29 43 6 1 5 0 4
