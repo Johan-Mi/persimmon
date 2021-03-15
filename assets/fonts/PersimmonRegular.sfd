@@ -22,11 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1615539427
-<<<<<<< HEAD
-ModificationTime: 1615797397
-=======
 ModificationTime: 1615796514
->>>>>>> 278776a406e5368d55c8828d83ad4a7a617392bf
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -40,6 +36,7 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
+OS2Vendor: 'PfEd'
 MarkAttachClasses: 1
 DEI: 91125
 Encoding: ISO8859-1
@@ -48,7 +45,7 @@ NameList: AGL For New Fonts
 DisplaySize: 8
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 53 15
+WinInfo: 0 53 16
 OnlyBitmaps: 1
 BeginPrivate: 0
 EndPrivate
@@ -323,6 +320,7 @@ EndChar
 StartChar: bracketleft
 Encoding: 91 91 38
 Width: 625
+Flags: W
 LayerCount: 2
 EndChar
 
@@ -336,6 +334,7 @@ EndChar
 StartChar: bracketright
 Encoding: 93 93 40
 Width: 625
+Flags: W
 LayerCount: 2
 EndChar
 
@@ -475,6 +474,7 @@ EndChar
 StartChar: greater
 Encoding: 62 62 60
 Width: 500
+Flags: W
 LayerCount: 2
 EndChar
 
@@ -714,7 +714,7 @@ Width: 1000
 LayerCount: 2
 EndChar
 EndChars
-BitmapFont: 8 95 6 2 1
+BitmapFont: 8 96 6 2 1
 BDFChar: 0 65 6 1 5 0 4
 E/=:FL]@DT
 BDFChar: 1 66 6 1 5 0 4
@@ -767,17 +767,10 @@ BDFChar: 24 89 6 1 5 0 4
 Leo3:+92BA
 BDFChar: 25 90 6 1 5 0 4
 p^eQ5p](9o
-<<<<<<< HEAD
-BDFChar: 26 41 3 1 2 0 4
-J3Z@bJ,fQL
-BDFChar: 27 40 3 1 2 0 4
-5_+B85QCca
-=======
 BDFChar: 26 41 5 1 4 -2 4
 i,CA(0Q>qM
 BDFChar: 27 40 5 1 4 -2 4
 E8\OI^u0/3
->>>>>>> 278776a406e5368d55c8828d83ad4a7a617392bf
 BDFChar: 28 33 3 1 2 -2 4
 ^qdb$!5QAM
 BDFChar: 29 43 6 1 5 0 4
@@ -866,8 +859,8 @@ BDFChar: 70 99 4 1 3 0 3
 @"<c8
 BDFChar: 71 100 5 1 4 0 4
 &.ifBDu]k<
-BDFChar: 72 101 5 1 4 0 4
-@$'l.Du]k<
+BDFChar: 72 101 5 1 4 0 3
+@.8\S
 BDFChar: 73 102 5 1 4 0 5
 0L.n]5X5;L
 BDFChar: 74 103 5 1 4 -2 3
@@ -894,8 +887,8 @@ BDFChar: 84 113 5 1 4 -2 3
 E0-0#&.egA
 BDFChar: 85 114 5 1 4 0 3
 @$#nh
-BDFChar: 86 115 5 1 3 0 4
-@":Kb^]4?7
+BDFChar: 86 115 5 1 3 0 3
+@)*o#
 BDFChar: 87 116 5 1 4 0 4
 5i=n(+92BA
 BDFChar: 88 117 5 1 4 0 3
