@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1615539427
-ModificationTime: 1615795988
+ModificationTime: 1615796514
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -213,7 +213,7 @@ EndChar
 
 StartChar: X
 Encoding: 88 88 23
-Width: 1000
+Width: 750
 Flags: W
 LayerCount: 2
 EndChar
@@ -496,7 +496,7 @@ EndChar
 
 StartChar: bar
 Encoding: 124 124 64
-Width: 1000
+Width: 250
 Flags: W
 LayerCount: 2
 EndChar
@@ -711,58 +711,58 @@ LayerCount: 2
 EndChar
 EndChars
 BitmapFont: 8 95 6 2 1
-BDFChar: 0 65 6 1 5 -2 4
-E/9>FLkpie
-BDFChar: 1 66 6 1 5 -2 4
-n;)niLktO#
-BDFChar: 2 67 6 1 5 -2 4
-E/9$pJ;A.E
-BDFChar: 3 68 6 1 5 -2 4
-i/ibNLktO#
-BDFChar: 4 69 6 1 5 -2 4
-pjdniJ:RCp
-BDFChar: 5 70 6 1 5 -2 4
-pjdniJ:N.M
-BDFChar: 6 71 6 1 5 -2 4
-E/9$pR##\]
-BDFChar: 7 72 6 1 5 -2 4
-Lkpl^Lkpie
-BDFChar: 8 73 4 1 3 -2 4
-i'9Om5X=6-
-BDFChar: 9 74 6 1 5 -2 4
-#RC\A#`*F"
-BDFChar: 10 75 6 1 5 -2 4
-Lkq/NOGJ\m
-BDFChar: 11 76 5 1 4 -2 4
-J:N0#J:R+h
-BDFChar: 12 77 6 1 5 -2 4
-LtJY^Lkpie
-BDFChar: 13 78 6 1 5 -2 4
-LrcN^Lkpie
-BDFChar: 14 79 6 1 5 -2 4
-E/9=+Lkp!M
-BDFChar: 15 80 6 1 5 -2 4
-n;)niJ:N.M
-BDFChar: 16 81 7 1 6 -2 4
-E/9=+LmWPi
-BDFChar: 17 82 6 1 5 -2 4
-n;)niLkpie
-BDFChar: 18 83 6 1 5 -2 4
-E/9$`#`*F"
-BDFChar: 19 84 6 1 5 -2 4
-p`L\%+<Vd,
-BDFChar: 20 85 6 1 5 -2 4
-LkpkCLkp!M
-BDFChar: 21 86 6 1 5 -2 4
-LkpkCLeo2o
-BDFChar: 22 87 6 1 5 -2 4
-LkpkcW2NMm
-BDFChar: 23 88 8 1 7 -2 4
-Jj_!u-q&Xe
-BDFChar: 24 89 6 1 5 -2 4
-Leo3:+<Vd,
-BDFChar: 25 90 6 1 5 -2 4
-p]qER5_/V0
+BDFChar: 0 65 6 1 5 0 4
+E/=:FL]@DT
+BDFChar: 1 66 6 1 5 0 4
+n;-Rin,NFg
+BDFChar: 2 67 6 1 5 0 4
+E/9%#Du]k<
+BDFChar: 3 68 6 1 5 0 4
+i/ibNn,NFg
+BDFChar: 4 69 6 1 5 0 4
+pji-ip](9o
+BDFChar: 5 70 6 1 5 0 4
+pji-iJ,fQL
+BDFChar: 6 71 6 1 5 0 4
+E/9%3GQ7^D
+BDFChar: 7 72 6 1 5 0 4
+Lkth^L]@DT
+BDFChar: 8 73 4 1 3 0 4
+i'9OmhuE`W
+BDFChar: 9 74 6 1 5 0 4
+#RC]lDu]k<
+BDFChar: 10 75 6 1 5 0 4
+LlgPVL]@DT
+BDFChar: 11 76 5 1 4 0 4
+J:N0#n,NFg
+BDFChar: 12 77 6 1 5 0 4
+LtJY^L]@DT
+BDFChar: 13 78 6 1 5 0 4
+LrcN^L]@DT
+BDFChar: 14 79 6 1 5 0 4
+E/9=+Du]k<
+BDFChar: 15 80 6 1 5 0 4
+n;-RaJ,fQL
+BDFChar: 16 81 7 1 6 0 4
+E/9=;HiO-H
+BDFChar: 17 82 6 1 5 0 4
+n;-RiL]@DT
+BDFChar: 18 83 6 1 5 0 4
+G^s`=n,NFg
+BDFChar: 19 84 6 1 5 0 4
+p`L\%+92BA
+BDFChar: 20 85 6 1 5 0 4
+LkpkCDu]k<
+BDFChar: 21 86 6 1 5 0 4
+Lkpj`+92BA
+BDFChar: 22 87 6 1 5 0 4
+Lo@8N:]LIq
+BDFChar: 23 88 6 1 5 0 4
+Leo3jL]@DT
+BDFChar: 24 89 6 1 5 0 4
+Leo3:+92BA
+BDFChar: 25 90 6 1 5 0 4
+p^eQ5p](9o
 BDFChar: 26 41 5 1 4 -2 4
 i,CA(0Q>qM
 BDFChar: 27 40 5 1 4 -2 4
@@ -839,7 +839,7 @@ BDFChar: 62 64 8 0 0 0 0
 z
 BDFChar: 63 126 7 1 6 2 3
 A=*>s
-BDFChar: 64 124 8 4 4 -2 4
+BDFChar: 64 124 2 1 1 -2 4
 J:N0#J:N.M
 BDFChar: 65 123 6 1 5 -2 4
 3+-.0?skqo
