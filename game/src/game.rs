@@ -50,7 +50,8 @@ impl Game {
             height: 100,
             contained: Box::new(Panel {
                 contained: Some(Box::new(Text {
-                    text: "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG. NO LOWERCASE GLYPHS YET, THOUGH. ALSO, THIS FONT IS KIND OF UGLY BUT IT'S JUST A PLACEHOLDER."
+                    text: "The quick brown fox jumps over the lazy dog.\n\
+                           1234567890"
                         .to_string(),
                     style: TextStyle::Regular,
                 })),
