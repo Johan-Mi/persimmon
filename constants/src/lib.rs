@@ -1,3 +1,5 @@
+pub mod keybinds;
+
 pub const TEAM_SIZE: usize = 6;
 
 pub const FRAMERATE: u32 = 60;

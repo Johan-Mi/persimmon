@@ -1,4 +1,4 @@
-use crate::core::{Position, Rect, Widget};
+use crate::core::{Position, Rect, UiResponse, Widget};
 
 pub struct Positioned {
     pub x: Position,
@@ -10,8 +10,11 @@ pub struct Positioned {
 }
 
 impl Widget for Positioned {
-    fn handle_event(&mut self, event: &sdl2::event::Event) {
-        self.contained.handle_event(event);
+    fn handle_event(
+        &mut self,
+        event: &sdl2::event::Event,
+    ) -> Option<UiResponse> {
+        self.contained.handle_event(event)
     }
 
     fn render(&self, boundry: &Rect, gfx: &mut gfx::Gfx) {

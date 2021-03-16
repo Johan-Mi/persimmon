@@ -38,6 +38,9 @@ dependencies = [
 [[package]]
 name = "constants"
 version = "0.1.0"
+dependencies = [
+ "sdl2",
+]
 
 [[package]]
 name = "creatures"
@@ -192,6 +195,7 @@ dependencies = [
 name = "ui"
 version = "0.1.0"
 dependencies = [
+ "constants",
  "gfx",
  "sdl2",
  "world",

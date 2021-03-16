@@ -1,4 +1,4 @@
-use crate::core::{Rect, Widget};
+use crate::core::{Rect, UiResponse, Widget};
 use sdl2::{event::Event, pixels::Color, rect::Rect as SdlRect};
 use world::tile::Tile;
 
@@ -7,9 +7,11 @@ pub struct Panel {
 }
 
 impl Widget for Panel {
-    fn handle_event(&mut self, event: &Event) {
+    fn handle_event(&mut self, event: &Event) -> Option<UiResponse> {
         if let Some(contained) = &mut self.contained {
-            contained.handle_event(event);
+            contained.handle_event(event)
+        } else {
+            None
         }
     }
 

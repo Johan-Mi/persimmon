@@ -22,7 +22,7 @@ use ui::{
     core::{Position, Rect as UiRect, Widget},
     widgets::{
         text::{Text, TextStyle},
-        Panel, Positioned,
+        Panel, Positioned, Toggle,
     },
 };
 use world::room::Room;
@@ -48,13 +48,20 @@ impl Game {
             y: Position::Absolute(8),
             width: 160,
             height: 100,
-            contained: Box::new(Panel {
-                contained: Some(Box::new(Text {
-                    text: "The quick brown fox jumps over the lazy dog.\n\
-                           1234567890"
-                        .to_string(),
-                    style: TextStyle::Regular,
-                })),
+            contained: Box::new(Toggle {
+                is_on: false,
+                on: Box::new(Panel {
+                    contained: Some(Box::new(Text {
+                        text: "Toggle: on\nPress `I`".to_string(),
+                        style: TextStyle::Regular,
+                    })),
+                }),
+                off: Box::new(Panel {
+                    contained: Some(Box::new(Text {
+                        text: "Toggle: off\nPress `I`".to_string(),
+                        style: TextStyle::Regular,
+                    })),
+                }),
             }),
         });
 
@@ -163,7 +170,9 @@ impl Game {
                         gfx.canvas.clear();
                     }
 
-                    _ => {}
+                    _ => {
+                        self.menu.handle_event(&event);
+                    }
                 }
             }
 

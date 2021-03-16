@@ -1,4 +1,4 @@
-use crate::core::{Rect, Widget};
+use crate::core::{Rect, UiResponse, Widget};
 use sdl2::{pixels::Color, rect::Rect as SdlRect};
 
 pub struct Text {
@@ -7,7 +7,12 @@ pub struct Text {
 }
 
 impl Widget for Text {
-    fn handle_event(&mut self, _event: &sdl2::event::Event) {}
+    fn handle_event(
+        &mut self,
+        _event: &sdl2::event::Event,
+    ) -> Option<UiResponse> {
+        None
+    }
 
     fn render(&self, boundry: &Rect, gfx: &mut gfx::Gfx) {
         let font = match self.style {
