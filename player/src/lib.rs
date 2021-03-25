@@ -3,8 +3,8 @@ use creatures::Creature;
 use misc::direction::Direction;
 
 pub struct Player {
-    x: u32,
-    y: u32,
+    pub x: u32,
+    pub y: u32,
     dir: Direction,
 
     team: [Option<Creature>; TEAM_SIZE],
@@ -19,5 +19,11 @@ impl Player {
 
             team: <[_; TEAM_SIZE]>::default(),
         }
+    }
+}
+
+impl Default for Player {
+    fn default() -> Self {
+        Self::new()
     }
 }

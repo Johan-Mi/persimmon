@@ -1,8 +1,8 @@
-use crate::state::GameState;
+use crate::{player::render_player, state::GameState};
 use command::{subcommands::Query, Command};
 use constants::{
-    FRAMERATE, TILE_SIZE, WINDOW_PIXEL_HEIGHT, WINDOW_PIXEL_WIDTH,
-    WINDOW_TILE_HEIGHT, WINDOW_TILE_WIDTH,
+    FRAMERATE, TILE_SIZE, WINDOW_PIXEL_HEIGHT, WINDOW_PIXEL_WIDTH, WINDOW_TILE_HEIGHT,
+    WINDOW_TILE_WIDTH,
 };
 use creatures::CreatureKind;
 use gfx::{Fonts, Gfx, Textures};
@@ -18,13 +18,6 @@ use std::{
     collections::HashMap,
     time::{Duration, Instant},
 };
-use ui::{
-    core::{Position, Rect as UiRect, Widget},
-    widgets::{
-        text::{Text, TextStyle},
-        Panel, Positioned, Toggle,
-    },
-};
 use world::room::Room;
 
 pub struct Game {
@@ -33,8 +26,6 @@ pub struct Game {
 
     rooms: HashMap<String, Room>,
     current_room: String,
-
-    menu: Box<dyn Widget>,
 }
 
 impl Game {
@@ -43,34 +34,11 @@ impl Game {
         let mut rooms = HashMap::with_capacity(1);
         rooms.insert("default".to_string(), default_room);
 
-        let menu = Box::new(Positioned {
-            x: Position::Absolute(8),
-            y: Position::Absolute(8),
-            width: 160,
-            height: 100,
-            contained: Box::new(Toggle {
-                is_on: false,
-                on: Box::new(Panel {
-                    contained: Some(Box::new(Text {
-                        text: "Toggle: on\nPress `I`".to_string(),
-                        style: TextStyle::Regular,
-                    })),
-                }),
-                off: Box::new(Panel {
-                    contained: Some(Box::new(Text {
-                        text: "Toggle: off\nPress `I`".to_string(),
-                        style: TextStyle::Regular,
-                    })),
-                }),
-            }),
-        });
-
         Self {
             player: Player::new(),
             state: GameState::Overworld,
             rooms,
             current_room: "default".to_string(),
-            menu,
         }
     }
 
@@ -80,10 +48,7 @@ impl Game {
                 Query::CreatureKind { name } => {
                     if let Ok(kind) = name.parse::<CreatureKind>() {
                         let name = kind.as_str();
-                        let evolution = kind
-                            .evolves_into()
-                            .map(|k| k.as_str())
-                            .unwrap_or("None");
+                        let evolution = kind.evolves_into().map(|k| k.as_str()).unwrap_or("None");
 
                         println!("{}", name);
                         println!("  - Evolves into: {}", evolution);
@@ -161,18 +126,13 @@ impl Game {
                         ..
                     } => {
                         gfx.canvas
-                            .set_logical_size(
-                                WINDOW_PIXEL_WIDTH,
-                                WINDOW_PIXEL_HEIGHT,
-                            )
+                            .set_logical_size(WINDOW_PIXEL_WIDTH, WINDOW_PIXEL_HEIGHT)
                             .unwrap();
                         gfx.canvas.set_draw_color(Color::BLACK);
                         gfx.canvas.clear();
                     }
 
-                    _ => {
-                        self.menu.handle_event(&event);
-                    }
+                    _ => {}
                 }
             }
 
@@ -215,12 +175,6 @@ impl Game {
             }
         }
 
-        let boundry = UiRect {
-            x: 0,
-            y: 0,
-            width: WINDOW_PIXEL_WIDTH,
-            height: WINDOW_PIXEL_HEIGHT,
-        };
-        self.menu.render(&boundry, gfx);
+        render_player(&self.player, gfx);
     }
 }
