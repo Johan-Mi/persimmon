@@ -1,18 +1,17 @@
+use std::convert::TryInto;
+
 use crate::CommandError;
 
-pub(crate) fn get_one_arg<'a>(
+pub(crate) fn get_n_args<'a, const N: usize>(
     caller: &'static str,
     args: &'a [&str],
-) -> Result<&'a str, CommandError> {
-    match args {
-        [the_arg] => Ok(the_arg),
-
-        args => Err(CommandError::WrongNumberOfArguments {
+) -> Result<[&'a str; N], CommandError> {
+    args.try_into()
+        .or(Err(CommandError::WrongNumberOfArguments {
             caller,
             expected: 1,
             found: args.len(),
-        }),
-    }
+        }))
 }
 
 #[macro_export]

@@ -1,4 +1,4 @@
-use crate::{def_subcommands, utils::get_one_arg, CommandError};
+use crate::{def_subcommands, utils::get_n_args, CommandError};
 
 pub enum Query {
     CreatureKind { name: String },
@@ -12,7 +12,7 @@ def_subcommands! {
 }
 
 pub fn parsesub_creature_kind(args: &[&str]) -> Result<Query, CommandError> {
-    let name = get_one_arg("query creature_kind", args)?;
+    let [name] = get_n_args("query creature_kind", args)?;
 
     Ok(Query::CreatureKind {
         name: name.to_string(),
