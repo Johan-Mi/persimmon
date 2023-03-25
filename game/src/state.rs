@@ -1,4 +1,4 @@
-pub(crate) enum GameState {
+pub enum GameState {
     Overworld,
     Editor,
 }

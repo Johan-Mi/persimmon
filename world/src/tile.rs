@@ -11,6 +11,7 @@ pub enum Tile {
 }
 
 impl Tile {
+    #[must_use]
     pub fn rect(&self) -> Rect {
         Rect::new(*self as i32 * TILE_SIZE as i32, 0, TILE_SIZE, TILE_SIZE)
     }

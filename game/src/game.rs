@@ -1,8 +1,8 @@
 use crate::{player::render_player, state::GameState};
 use command::{subcommands::Query, Command};
 use constants::{
-    FRAMERATE, TILE_SIZE, WINDOW_PIXEL_HEIGHT, WINDOW_PIXEL_WIDTH, WINDOW_TILE_HEIGHT,
-    WINDOW_TILE_WIDTH,
+    FRAMERATE, TILE_SIZE, WINDOW_PIXEL_HEIGHT, WINDOW_PIXEL_WIDTH,
+    WINDOW_TILE_HEIGHT, WINDOW_TILE_WIDTH,
 };
 use creatures::CreatureKind;
 use gfx::{Fonts, Gfx, Textures};
@@ -29,6 +29,7 @@ pub struct Game {
 }
 
 impl Game {
+    #[must_use]
     pub fn new() -> Self {
         let default_room = Room::default();
         let mut rooms = HashMap::with_capacity(1);
@@ -48,12 +49,13 @@ impl Game {
                 Query::CreatureKind { name } => {
                     if let Ok(kind) = name.parse::<CreatureKind>() {
                         let name = kind.as_str();
-                        let evolution = kind.evolves_into().map(|k| k.as_str()).unwrap_or("None");
+                        let evolution =
+                            kind.evolves_into().map_or("None", |k| k.as_str());
 
-                        println!("{}", name);
-                        println!("  - Evolves into: {}", evolution);
+                        println!("{name}");
+                        println!("  - Evolves into: {evolution}");
                     } else {
-                        eprintln!("`{}` is not a creature", name);
+                        eprintln!("`{name}` is not a creature");
                     }
                 }
             },
@@ -110,11 +112,8 @@ impl Game {
 
             for event in event_pump.poll_iter() {
                 match event {
-                    Event::Quit { .. } => {
-                        break 'running;
-                    }
-
-                    Event::KeyDown {
+                    Event::Quit { .. }
+                    | Event::KeyDown {
                         keycode: Some(Keycode::Escape),
                         ..
                     } => {
@@ -126,7 +125,10 @@ impl Game {
                         ..
                     } => {
                         gfx.canvas
-                            .set_logical_size(WINDOW_PIXEL_WIDTH, WINDOW_PIXEL_HEIGHT)
+                            .set_logical_size(
+                                WINDOW_PIXEL_WIDTH,
+                                WINDOW_PIXEL_HEIGHT,
+                            )
                             .unwrap();
                         gfx.canvas.set_draw_color(Color::BLACK);
                         gfx.canvas.clear();

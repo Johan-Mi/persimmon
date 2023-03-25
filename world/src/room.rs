@@ -9,6 +9,7 @@ pub struct Room {
 }
 
 impl Room {
+    #[must_use]
     pub fn get_tile(&self, x: usize, y: usize) -> &Tile {
         &self.tiles[y * self.width + x]
     }

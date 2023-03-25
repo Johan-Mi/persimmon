@@ -11,6 +11,7 @@ pub struct Player {
 }
 
 impl Player {
+    #[must_use]
     pub fn new() -> Self {
         Self {
             x: 0,

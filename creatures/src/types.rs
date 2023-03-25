@@ -1,2 +1,2 @@
-pub(crate) type Health = i32;
-pub(crate) type Exp = i32;
+pub type Health = i32;
+pub type Exp = i32;

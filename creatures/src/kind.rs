@@ -55,8 +55,16 @@ pub enum CreatureKind {
 }
 
 impl CreatureKind {
-    pub fn evolves_into(&self) -> Option<CreatureKind> {
-        use CreatureKind::*;
+    #[must_use]
+    pub const fn evolves_into(&self) -> Option<Self> {
+        use CreatureKind::{
+            AppleRex, Appleguana, Applezard, Axolapple, Banabug, Banjot,
+            Blowblow, Blowrian, Bluebug, Bluecoon, Blueknight, Castork,
+            Castorkoo, Clameye, Clamscular, Dragonion, Dragonling, Durowfish,
+            Melobull, Melocalf, Melocattle, Pineaxolapple, Pineolotl,
+            PrayingBanantis, Storcarrot, Storcot, Storkoneer, Stralcon,
+            Strawchick, Strawhawk, Wygoon,
+        };
 
         match self {
             Applezard => Some(Appleguana),
@@ -94,8 +102,17 @@ impl CreatureKind {
         }
     }
 
-    pub fn as_str(&self) -> &'static str {
-        use CreatureKind::*;
+    #[must_use]
+    pub const fn as_str(&self) -> &'static str {
+        use CreatureKind::{
+            AppleRex, Appleguana, Applezard, Axolapple, Banabug, Banjot,
+            Blowblow, Blowrian, Bluebug, Bluecoon, Blueknight, Breadclops,
+            Castork, Castorkoo, Chillwhal, Clameye, Clamscular, Dragonion,
+            Dragonling, Durowfish, FlyingLimezard, Melobull, Melocalf,
+            Melocattle, Orambutan, Pineaxolapple, Pineolotl, PrayingBanantis,
+            SirToast, Storcarrot, Storcot, Storkoneer, Stralcon, Strawchick,
+            Strawhawk, Wygoon,
+        };
 
         match self {
             Applezard => "Applezard",
@@ -142,7 +159,15 @@ impl FromStr for CreatureKind {
     type Err = ();
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        use CreatureKind::*;
+        use CreatureKind::{
+            AppleRex, Appleguana, Applezard, Axolapple, Banabug, Banjot,
+            Blowblow, Blowrian, Bluebug, Bluecoon, Blueknight, Breadclops,
+            Castork, Castorkoo, Chillwhal, Clameye, Clamscular, Dragonion,
+            Dragonling, Durowfish, FlyingLimezard, Melobull, Melocalf,
+            Melocattle, Orambutan, Pineaxolapple, Pineolotl, PrayingBanantis,
+            SirToast, Storcarrot, Storcot, Storkoneer, Stralcon, Strawchick,
+            Strawhawk, Wygoon,
+        };
 
         match s {
             "applezard" => Ok(Applezard),

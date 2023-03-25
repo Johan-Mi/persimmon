@@ -8,11 +8,9 @@ pub struct Panel {
 
 impl Widget for Panel {
     fn handle_event(&mut self, event: &Event) -> Option<UiResponse> {
-        if let Some(contained) = &mut self.contained {
-            contained.handle_event(event)
-        } else {
-            None
-        }
+        self.contained
+            .as_mut()
+            .and_then(|contained| contained.handle_event(event))
     }
 
     fn render(&self, boundry: &Rect, gfx: &mut gfx::Gfx) {
